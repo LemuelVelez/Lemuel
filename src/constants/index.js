@@ -95,6 +95,7 @@ const expCards = [
       "Built a QR code-based attendance scanner using Expo, React Native, and WatermelonDB.",
       "Created a Next.js QR code generator to support SSG events and attendance workflows.",
       "Developed the Penalyze full-stack web application with React.js, Express.js, Node.js, and PostgreSQL.",
+      "Built Attendance Repository, a production attendance system using React, Go, PostgreSQL, and Redis for responsive records and fast data access.",
     ],
   },
   {
