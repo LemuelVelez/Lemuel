@@ -11,7 +11,7 @@ const Experience = () => (
           <div className="experience-image">
             <img src={card.imgPath} alt={`${card.title} highlight`} />
             <div className="experience-logo">
-              <img src={card.logoPath} alt="JRMSU logo" />
+              <img src={card.logoPath} alt={`${card.organization} logo`} />
             </div>
           </div>
 

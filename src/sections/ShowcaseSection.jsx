@@ -7,15 +7,14 @@ const ShowcaseSection = () => (
 
     <div className="projects-grid">
       {projects.map((project, index) => (
-        <article key={project.title} className={`project-card project-tone-${(index % 4) + 1}`}>
-          <div className="project-preview">
+        <article key={project.title} className="project-card">
+          <div className={`project-preview${project.mobilePreview ? " project-preview-mobile" : ""}`}>
+            <img
+              src={project.imagePath}
+              alt={`${project.title} interface preview`}
+              loading="lazy"
+            />
             <span className="project-category">{project.category}</span>
-            <strong>{project.short}</strong>
-            <div className="preview-lines">
-              <span />
-              <span />
-              <span />
-            </div>
           </div>
 
           <div className="project-body">
