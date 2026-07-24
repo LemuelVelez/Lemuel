@@ -22,6 +22,27 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 177, 206, 0.65) #050816;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #050816;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(79, 124, 255, 0.9), rgba(72, 199, 142, 0.82));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6d91ff, #5bdca1);
 }
 
 body {
@@ -620,16 +641,22 @@ img {
   font-weight: 700;
 }
 
-.tech-marquee-item span {
-  width: 38px;
-  height: 38px;
+.tech-icon {
+  width: 42px;
+  height: 42px;
   display: grid;
   place-items: center;
-  border: 1px solid var(--line);
-  border-radius: 11px;
-  background: #111833;
-  color: var(--yellow);
-  font-size: 0.68rem;
+  padding: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.035));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.tech-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .marquee-fade {

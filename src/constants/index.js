@@ -41,23 +41,26 @@ const abilities = [
   },
 ];
 
-const techStackLabels = [
-  "React.js",
-  "Next.js",
-  "React Native",
-  "Expo",
-  "Go",
-  "Express.js",
-  "Node.js",
-  "Laravel",
-  "Appwrite",
-  "PostgreSQL",
-  "MySQL",
-  "MongoDB",
-  "Redis",
-  "WatermelonDB",
-  "Coolify",
-  "Git & GitHub",
+const techStackItems = [
+  { name: "React.js", iconPath: "https://cdn.simpleicons.org/react/61DAFB" },
+  { name: "Next.js", iconPath: "https://cdn.simpleicons.org/nextdotjs/FFFFFF" },
+  { name: "React Native", iconPath: "https://cdn.simpleicons.org/react/61DAFB" },
+  { name: "Expo", iconPath: "https://cdn.simpleicons.org/expo/FFFFFF" },
+  { name: "Go", iconPath: "https://cdn.simpleicons.org/go/00ADD8" },
+  { name: "Express.js", iconPath: "https://cdn.simpleicons.org/express/FFFFFF" },
+  { name: "Node.js", iconPath: "https://cdn.simpleicons.org/nodedotjs/5FA04E" },
+  { name: "Laravel", iconPath: "https://cdn.simpleicons.org/laravel/FF2D20" },
+  { name: "Appwrite", iconPath: "https://cdn.simpleicons.org/appwrite/F02E65" },
+  { name: "PostgreSQL", iconPath: "https://cdn.simpleicons.org/postgresql/4169E1" },
+  { name: "MySQL", iconPath: "https://cdn.simpleicons.org/mysql/4479A1" },
+  { name: "MongoDB", iconPath: "https://cdn.simpleicons.org/mongodb/47A248" },
+  { name: "Redis", iconPath: "https://cdn.simpleicons.org/redis/FF4438" },
+  {
+    name: "WatermelonDB",
+    iconPath: "/images/tech/watermelondb.png",
+  },
+  { name: "Coolify", iconPath: "https://cdn.simpleicons.org/coolify/6B16ED" },
+  { name: "Git & GitHub", iconPath: "https://cdn.simpleicons.org/github/FFFFFF" },
 ];
 
 const skillGroups = [
@@ -236,6 +239,6 @@ export {
   projects,
   skillGroups,
   socialLinks,
-  techStackLabels,
+  techStackItems,
   words,
 };
