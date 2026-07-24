@@ -1,278 +1,232 @@
 const navLinks = [
-  {
-    name: "Work",
-    link: "#work",
-  },
-  {
-    name: "Experience",
-    link: "#experience",
-  },
-  {
-    name: "Skills",
-    link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
-  },
+  { name: "Projects", link: "#work" },
+  { name: "Experience", link: "#experience" },
+  { name: "Skills", link: "#skills" },
+  { name: "Education", link: "#education" },
 ];
 
 const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Web Apps", imgPath: "/images/code.svg" },
+  { text: "Mobile Apps", imgPath: "/images/devices.png" },
+  { text: "APIs", imgPath: "/images/concepts.svg" },
+  { text: "Systems", imgPath: "/images/ideas.svg" },
+  { text: "Web Apps", imgPath: "/images/code.svg" },
+  { text: "Mobile Apps", imgPath: "/images/devices.png" },
+  { text: "APIs", imgPath: "/images/concepts.svg" },
+  { text: "Systems", imgPath: "/images/ideas.svg" },
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
-];
-
-const logoIconsList = [
-  {
-    imgPath: "/images/logos/company-logo-1.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-2.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-3.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-4.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-5.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-6.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-7.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-9.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-10.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-11.png",
-  },
+  { value: 7, suffix: "", label: "Featured Systems" },
+  { value: 2, suffix: "", label: "Professional Roles" },
+  { value: 10, suffix: "+", label: "Core Technologies" },
+  { value: 4, suffix: "", label: "Database Technologies" },
 ];
 
 const abilities = [
   {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    imgPath: "/images/code.svg",
+    title: "Full-Stack Delivery",
+    desc: "Builds complete web applications from responsive interfaces and APIs to databases, authentication, and deployment.",
   },
   {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    imgPath: "/images/devices.png",
+    title: "Web & Mobile Systems",
+    desc: "Develops React, Next.js, Expo, and React Native solutions, including QR-based attendance and utility applications.",
   },
   {
     imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    title: "Deployment & Reliability",
+    desc: "Hosts and maintains applications using Coolify, Hostinger VPS, DigitalOcean, Appwrite, Redis, and production databases.",
   },
 ];
 
-const techStackImgs = [
-  {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
-  },
-  {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
-  },
-  {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
-  },
-  {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
-  },
+const techStackLabels = [
+  "React.js",
+  "Next.js",
+  "React Native",
+  "Expo",
+  "Go",
+  "Express.js",
+  "Node.js",
+  "Laravel",
+  "Appwrite",
+  "PostgreSQL",
+  "MySQL",
+  "MongoDB",
+  "Redis",
+  "WatermelonDB",
+  "Coolify",
+  "Git & GitHub",
 ];
 
-const techStackIcons = [
+const skillGroups = [
   {
-    name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
+    title: "Frontend",
+    description: "Responsive interfaces focused on usability, maintainability, and performance.",
+    items: ["React.js", "Next.js", "JavaScript", "Responsive UI", "UX Implementation"],
   },
   {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
+    title: "Backend",
+    description: "APIs, business logic, authentication, integrations, and server-side workflows.",
+    items: ["Go", "Express.js", "Node.js", "Next.js", "Laravel", "Appwrite"],
   },
   {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
+    title: "Data",
+    description: "Relational, document, cache, and offline-first storage for production systems.",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "WatermelonDB"],
   },
   {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
+    title: "Mobile & DevOps",
+    description: "Cross-platform apps, source control, VPS deployment, and application hosting.",
+    items: ["React Native", "Expo", "Git", "GitHub", "Coolify", "Hostinger VPS", "DigitalOcean"],
   },
 ];
 
 const expCards = [
   {
-    review: "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
+    imgPath: "/images/ssg-grad.jpeg",
+    logoPath: "/images/logo.png",
+    title: "SSG Programmer",
+    organization: "Supreme Student Government — JRMSU-TC",
+    date: "2024 – 2026",
     responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+      "Developed a fines management system for student government operations.",
+      "Built a QR code-based attendance scanner using Expo, React Native, and WatermelonDB.",
+      "Created a Next.js QR code generator to support SSG events and attendance workflows.",
+      "Developed the Penalyze full-stack web application with React.js, Express.js, Node.js, and PostgreSQL.",
     ],
   },
   {
-    review: "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
+    imgPath: "/images/bsis-grad.jpeg",
+    logoPath: "/images/logo.png",
+    title: "Junior Front End Developer",
+    organization: "CoreBridge Solutions Corporation — Remote",
+    date: "January 2025 – June 2025",
     responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
-    ],
-  },
-  {
-    review: "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+      "Developed, tested, and implemented front-end web applications with a focus on user experience and maintainability.",
+      "Collaborated with UX/UI designers and back-end engineers to turn design concepts into functional solutions.",
+      "Optimized pages for speed, scalability, and consistent behavior across devices and browsers.",
+      "Participated in code reviews, documentation, and remote workflows using Hubstaff for accountability.",
     ],
   },
 ];
 
-const expLogos = [
+const projects = [
   {
-    name: "logo1",
-    imgPath: "/images/logo1.png",
+    title: "PAC Online Payment",
+    short: "PAC",
+    category: "Payments",
+    description: "An online payment platform built with Next.js and Appwrite, integrated with PayMongo for payment processing.",
+    stack: ["Next.js", "Appwrite", "PayMongo"],
+    liveUrl: "https://pac-online-payment.vercel.app/",
+    sourceLinks: [
+      { label: "GitHub", url: "https://github.com/LemuelVelez/pac-online-payment" },
+    ],
   },
   {
-    name: "logo2",
-    imgPath: "/images/logo2.png",
+    title: "SurveyStat",
+    short: "SS",
+    category: "Analytics",
+    description: "A survey management and statistical reporting platform with a React frontend and Express/PostgreSQL backend.",
+    stack: ["React.js", "Express.js", "Node.js", "PostgreSQL"],
+    liveUrl: "https://surveystat.jrmsu-tc.online/",
+    sourceLinks: [
+      { label: "Frontend", url: "https://github.com/LemuelVelez/surveystat-frontend" },
+      { label: "Backend", url: "https://github.com/LemuelVelez/surveystat-backend" },
+    ],
   },
   {
-    name: "logo3",
-    imgPath: "/images/logo3.png",
+    title: "Attendance Repository",
+    short: "AR",
+    category: "Attendance",
+    description: "A production attendance repository using React, Go, PostgreSQL, and Redis for responsive records and fast data access.",
+    stack: ["React.js", "Go", "PostgreSQL", "Redis"],
+    liveUrl: "https://attendance-repo.jrmsu-tc.cloud/",
+    sourceLinks: [
+      { label: "GitHub", url: "https://github.com/LemuelVelez/AttendanceRepository" },
+    ],
+  },
+  {
+    title: "BookHive",
+    short: "BH",
+    category: "Library",
+    description: "A full-stack library platform with a React interface and an Express/Node.js API backed by PostgreSQL.",
+    stack: ["React.js", "Express.js", "Node.js", "PostgreSQL"],
+    liveUrl: "https://bookhive.jrmsu-tc.online/",
+    sourceLinks: [
+      { label: "Frontend", url: "https://github.com/LemuelVelez/book-hive" },
+      { label: "Backend", url: "https://github.com/LemuelVelez/book-hive-server" },
+    ],
+  },
+  {
+    title: "Penalyze",
+    short: "PZ",
+    category: "Fines Management",
+    description: "A fines management web application for student government workflows, reporting, and account tracking.",
+    stack: ["React.js", "Express.js", "Node.js", "PostgreSQL"],
+    liveUrl: "https://penalyze.jrmsu-tc.online/",
+    sourceLinks: [
+      { label: "Frontend", url: "https://github.com/LemuelVelez/penalyze-frontend" },
+      { label: "Backend", url: "https://github.com/LemuelVelez/penalyze-backend" },
+    ],
+  },
+  {
+    title: "SSG QR Code Generator",
+    short: "QR",
+    category: "QR Utility",
+    description: "A Next.js QR code generator created for Supreme Student Government attendance and event workflows.",
+    stack: ["Next.js", "QR Codes"],
+    liveUrl: "https://ssg-qrcode-generator.vercel.app/",
+    sourceLinks: [
+      { label: "GitHub", url: "https://github.com/LemuelVelez/ssg-qrcode-generator" },
+    ],
+  },
+  {
+    title: "SSG QR Code Scanner",
+    short: "SC",
+    category: "Mobile",
+    description: "An offline-capable QR attendance scanner built with Expo, React Native, and WatermelonDB.",
+    stack: ["Expo", "React Native", "WatermelonDB"],
+    liveUrl: null,
+    sourceLinks: [
+      { label: "GitHub", url: "https://github.com/LemuelVelez/ssg-qrcode-scanner" },
+    ],
   },
 ];
 
-const testimonials = [
+const educationCards = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
-    review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
+    title: "Bachelor of Science in Information Systems",
+    organization: "Jose Rizal Memorial State University",
+    date: "2022 – 2026",
+    description: "Completed a BS in Information Systems while building and deploying web and mobile systems for academic and student-government use.",
+    imgPath: "/images/bsis-grad.jpeg",
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
+    title: "SSG Programmer",
+    organization: "Supreme Student Government — JRMSU-TC",
+    date: "2024 – 2026",
+    description: "Applied software development skills to real campus workflows through fines management, QR generation, and attendance scanning systems.",
+    imgPath: "/images/ssg-grad.jpeg",
   },
 ];
 
-const socialImgs = [
-  {
-    name: "insta",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
-  },
-  {
-    name: "linkedin",
-    imgPath: "/images/linkedin.png",
-  },
+const socialLinks = [
+  { name: "GitHub", href: "https://github.com/LemuelVelez" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/lemuel-velez-a38a7a238" },
+  { name: "Email", href: "mailto:velezlem12@gmail.com" },
 ];
 
 export {
-  words,
   abilities,
-  logoIconsList,
   counterItems,
+  educationCards,
   expCards,
-  expLogos,
-  testimonials,
-  socialImgs,
-  techStackIcons,
-  techStackImgs,
   navLinks,
+  projects,
+  skillGroups,
+  socialLinks,
+  techStackLabels,
+  words,
 };

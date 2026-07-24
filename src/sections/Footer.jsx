@@ -1,27 +1,25 @@
-import { socialImgs } from "../constants";
+import { socialLinks } from "../constants";
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="flex flex-col justify-center">
-          <p>Terms & Conditions</p>
-        </div>
-        <div className="socials">
-          {socialImgs.map((socialImg, index) => (
-            <div key={index} className="icon">
-              <img src={socialImg.imgPath} alt="social icon" />
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-col justify-center">
-          <p className="text-center md:text-end">
-            © {new Date().getFullYear()} Adrian Hajdin. All rights reserved.
-          </p>
-        </div>
+const Footer = () => (
+  <footer className="footer">
+    <div className="footer-brand">
+      <img src="/images/logo.png" alt="JRMSU logo" />
+      <div>
+        <strong>Lemuel Velez</strong>
+        <span>Full-Stack Developer</span>
       </div>
-    </footer>
-  );
-};
+    </div>
+
+    <div className="footer-links">
+      {socialLinks.map((link) => (
+        <a key={link.name} href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
+          {link.name}
+        </a>
+      ))}
+    </div>
+
+    <p>© {new Date().getFullYear()} Lemuel Velez. Built with React and Vite.</p>
+  </footer>
+);
 
 export default Footer;

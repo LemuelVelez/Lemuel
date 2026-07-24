@@ -1,121 +1,60 @@
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-
 import TitleHeader from "../components/TitleHeader";
-import ContactExperience from "../components/models/contact/ContactExperience";
 
-const Contact = () => {
-  const formRef = useRef(null);
-  const [loading, setLoading] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+const Contact = () => (
+  <section id="contact" className="section-shell contact-section">
+    <TitleHeader title="Let’s Build Something Useful" sub="Open to development opportunities" />
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
+    <div className="contact-grid">
+      <div className="contact-card">
+        <p className="contact-intro">
+          I’m interested in full-stack, frontend, backend, and mobile development opportunities where I can contribute to practical systems and continue learning.
+        </p>
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true); // Show loading state
-
-    try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      );
-
-      // Reset form and stop loading
-      setForm({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("EmailJS Error:", error); // Optional: show toast
-    } finally {
-      setLoading(false); // Always stop loading, even on error
-    }
-  };
-
-  return (
-    <section id="contact" className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-5">
-        <TitleHeader
-          title="Get in Touch – Let’s Connect"
-          sub="💬 Have questions or ideas? Let’s talk! 🚀"
-        />
-        <div className="grid-12-cols mt-16">
-          <div className="xl:col-span-5">
-            <div className="flex-center card-border rounded-xl p-10">
-              <form
-                ref={formRef}
-                onSubmit={handleSubmit}
-                className="w-full flex flex-col gap-7"
-              >
-                <div>
-                  <label htmlFor="name">Your name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="What’s your good name?"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email">Your Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="What’s your email address?"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message">Your Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={form.message}
-                    onChange={handleChange}
-                    placeholder="How can I help you?"
-                    rows="5"
-                    required
-                  />
-                </div>
-
-                <button type="submit">
-                  <div className="cta-button group">
-                    <div className="bg-circle" />
-                    <p className="text">
-                      {loading ? "Sending..." : "Send Message"}
-                    </p>
-                    <div className="arrow-wrapper">
-                      <img src="/images/arrow-down.svg" alt="arrow" />
-                    </div>
-                  </div>
-                </button>
-              </form>
-            </div>
+        <div className="contact-details">
+          <a href="mailto:velezlem12@gmail.com">
+            <span>Email</span>
+            <strong>velezlem12@gmail.com</strong>
+          </a>
+          <a href="https://www.linkedin.com/in/lemuel-velez-a38a7a238" target="_blank" rel="noreferrer">
+            <span>LinkedIn</span>
+            <strong>lemuel-velez-a38a7a238 ↗</strong>
+          </a>
+          <a href="https://github.com/LemuelVelez" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <strong>LemuelVelez ↗</strong>
+          </a>
+          <div>
+            <span>Location</span>
+            <strong>Upper Sulitan, Naga, Zamboanga Sibugay, Philippines</strong>
           </div>
-          <div className="xl:col-span-7 min-h-96">
-            <div className="bg-[#cd7c2e] w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              <ContactExperience />
+        </div>
+      </div>
+
+      <div className="contact-visual" aria-label="Development profile highlight">
+        <div className="contact-code-window">
+          <div className="code-window-bar">
+            <span />
+            <span />
+            <span />
+          </div>
+          <pre><code>{`const developer = {
+  name: "Lemuel Velez",
+  role: "Full-Stack Developer",
+  builds: ["web", "mobile", "APIs"],
+  deploys: ["VPS", "Coolify", "Appwrite"],
+  readyToCollaborate: true
+};`}</code></pre>
+          <div className="contact-logo-lockup">
+            <img src="/images/logo.png" alt="JRMSU logo" />
+            <div>
+              <strong>From idea to production</strong>
+              <span>Practical systems, clean interfaces, reliable deployment.</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Contact;

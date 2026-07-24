@@ -1,30 +1,18 @@
-import { logoIconsList } from "../constants";
-
-const LogoIcon = ({ icon }) => {
-  return (
-    <div className="flex-none flex-center marquee-item">
-      <img src={icon.imgPath} alt={icon.name} />
-    </div>
-  );
-};
+import { techStackLabels } from "../constants";
 
 const LogoShowcase = () => (
-  <div className="md:my-20 my-10 relative">
-    <div className="gradient-edge" />
-    <div className="gradient-edge" />
-
-    <div className="marquee h-52">
-      <div className="marquee-box md:gap-12 gap-5">
-        {logoIconsList.map((icon, index) => (
-          <LogoIcon key={index} icon={icon} />
-        ))}
-
-        {logoIconsList.map((icon, index) => (
-          <LogoIcon key={index} icon={icon} />
-        ))}
-      </div>
+  <section className="marquee-section" aria-label="Technology stack">
+    <div className="marquee-fade marquee-fade-left" />
+    <div className="marquee-fade marquee-fade-right" />
+    <div className="marquee-track">
+      {[...techStackLabels, ...techStackLabels].map((item, index) => (
+        <div key={`${item}-${index}`} className="tech-marquee-item">
+          <span>{item.slice(0, 2).toUpperCase()}</span>
+          {item}
+        </div>
+      ))}
     </div>
-  </div>
+  </section>
 );
 
 export default LogoShowcase;
