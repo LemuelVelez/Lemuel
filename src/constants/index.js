@@ -227,7 +227,7 @@ const educationCards = [
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/LemuelVelez" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/lemuel-velez-a38a7a238" },
-  { name: "Email", href: "mailto:velezlem12@gmail.com" },
+  { name: "Email", href: "https://mail.google.com/mail/?view=cm&fs=1&to=velezlem12%40gmail.com" },
 ];
 
 export {
