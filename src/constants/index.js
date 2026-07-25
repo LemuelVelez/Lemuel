@@ -20,7 +20,7 @@ const counterItems = [
   { value: 7, suffix: "", label: "Featured Systems" },
   { value: 2, suffix: "", label: "Professional Roles" },
   { value: 10, suffix: "+", label: "Core Technologies" },
-  { value: 4, suffix: "", label: "Database Technologies" },
+  { value: 6, suffix: "", label: "Data & Storage Technologies" },
 ];
 
 const abilities = [
@@ -37,7 +37,7 @@ const abilities = [
   {
     imgPath: "/images/time.png",
     title: "Deployment & Reliability",
-    desc: "Hosts and maintains applications using Coolify, Hostinger VPS, DigitalOcean, Appwrite, Redis, and production databases.",
+    desc: "Hosts and maintains applications using Coolify, Hostinger VPS, DigitalOcean, AWS S3, Appwrite, Redis, and production databases.",
   },
 ];
 
@@ -55,6 +55,7 @@ const techStackItems = [
   { name: "MySQL", iconPath: "https://cdn.simpleicons.org/mysql/4479A1" },
   { name: "MongoDB", iconPath: "https://cdn.simpleicons.org/mongodb/47A248" },
   { name: "Redis", iconPath: "https://cdn.simpleicons.org/redis/FF4438" },
+  { name: "AWS S3", iconPath: "https://cdn.simpleicons.org/amazons3/569A31" },
   {
     name: "WatermelonDB",
     iconPath: "/images/tech/watermelondb.png",
@@ -76,8 +77,8 @@ const skillGroups = [
   },
   {
     title: "Data",
-    description: "Relational, document, cache, and offline-first storage for production systems.",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "WatermelonDB"],
+    description: "Relational, document, cache, object, and offline-first storage for production systems.",
+    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "AWS S3", "WatermelonDB"],
   },
   {
     title: "Mobile & DevOps",
@@ -159,8 +160,8 @@ const projects = [
     short: "BH",
     category: "Library",
     imagePath: "/images/bookhive.png",
-    description: "A full-stack library platform with a React interface and an Express/Node.js API backed by PostgreSQL.",
-    stack: ["React.js", "Express.js", "Node.js", "PostgreSQL"],
+    description: "A full-stack library platform with a React interface, an Express/Node.js API, PostgreSQL, and AWS S3 object storage.",
+    stack: ["React.js", "Express.js", "Node.js", "PostgreSQL", "AWS S3"],
     liveUrl: "https://bookhive.jrmsu-tc.online/",
     sourceLinks: [
       { label: "Frontend", url: "https://github.com/LemuelVelez/book-hive" },

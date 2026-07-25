@@ -29,7 +29,7 @@ const Hero = () => (
         </h1>
 
         <p className="hero-description">
-          I’m <strong>Lemuel Velez</strong>, a full-stack developer from Zamboanga Sibugay, Philippines. I build, deploy, and host web and mobile applications using React, Next.js, Go, Express.js, React Native, Appwrite, PostgreSQL, Redis, and modern VPS workflows.
+          I’m <strong>Lemuel Velez</strong>, a full-stack developer from Zamboanga Sibugay, Philippines. I build, deploy, and host web and mobile applications using React, Next.js, Go, Express.js, React Native, Appwrite, PostgreSQL, Redis, AWS S3, and modern VPS workflows.
         </p>
 
         <div className="hero-actions">
