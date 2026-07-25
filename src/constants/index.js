@@ -55,7 +55,7 @@ const techStackItems = [
   { name: "MySQL", iconPath: "https://cdn.simpleicons.org/mysql/4479A1" },
   { name: "MongoDB", iconPath: "https://cdn.simpleicons.org/mongodb/47A248" },
   { name: "Redis", iconPath: "https://cdn.simpleicons.org/redis/FF4438" },
-  { name: "AWS S3", iconPath: "https://cdn.simpleicons.org/amazons3/569A31" },
+  { name: "AWS S3", iconPath: "/images/tech/aws-s3.svg" },
   {
     name: "WatermelonDB",
     iconPath: "/images/tech/watermelondb.png",
