@@ -89,7 +89,6 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   background: rgba(5, 8, 22, 0.84);
-  border-bottom: 1px solid var(--line);
   backdrop-filter: blur(18px);
 }
 
