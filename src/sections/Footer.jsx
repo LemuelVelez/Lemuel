@@ -3,7 +3,7 @@ import { socialLinks } from "../constants";
 const Footer = () => (
   <footer className="footer">
     <div className="footer-brand">
-      <img src="/images/logo.png" alt="JRMSU logo" />
+      <img src="/images/logo.webp" alt="JRMSU logo" />
       <div>
         <strong>Lemuel Velez</strong>
         <span>Full-Stack Developer</span>

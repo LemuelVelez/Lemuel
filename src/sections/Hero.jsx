@@ -52,21 +52,21 @@ const Hero = () => (
 
       <div className="hero-visual" aria-label="Graduation highlights">
         <div className="photo-card photo-card-main">
-          <img src="/images/bsis-grad.jpeg" alt="Lemuel Velez BSIS graduation portrait" />
+          <img src="/images/bsis-grad.webp" alt="Lemuel Velez BSIS graduation portrait" />
           <div className="photo-caption">
             <strong>BS Information Systems</strong>
             <span>JRMSU · 2022–2026</span>
           </div>
         </div>
         <div className="photo-card photo-card-float">
-          <img src="/images/ssg-grad.jpeg" alt="Lemuel Velez SSG programmer graduation portrait" />
+          <img src="/images/ssg-grad.webp" alt="Lemuel Velez SSG programmer graduation portrait" />
           <div className="photo-caption">
             <strong>SSG Programmer</strong>
             <span>2024–2026</span>
           </div>
         </div>
         <div className="logo-orbit">
-          <img src="/images/logo.png" alt="Jose Rizal Memorial State University logo" />
+          <img src="/images/logo.webp" alt="Jose Rizal Memorial State University logo" />
         </div>
       </div>
     </div>

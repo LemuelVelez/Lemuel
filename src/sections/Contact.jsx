@@ -49,7 +49,7 @@ const Contact = () => (
   readyToCollaborate: true
 };`}</code></pre>
           <div className="contact-logo-lockup">
-            <img src="/images/logo.png" alt="JRMSU logo" />
+            <img src="/images/logo.webp" alt="JRMSU logo" />
             <div>
               <strong>From idea to production</strong>
               <span>Practical systems, clean interfaces, reliable deployment.</span>

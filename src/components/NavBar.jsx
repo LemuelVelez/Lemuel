@@ -14,7 +14,7 @@ const NavBar = () => {
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
         <a href="#hero" className="brand" aria-label="Lemuel Velez home">
-          <img src="/images/logo.png" alt="JRMSU logo" />
+          <img src="/images/logo.webp" alt="JRMSU logo" />
           <span>
             Lemuel Velez
             <small>Full-Stack Developer</small>
