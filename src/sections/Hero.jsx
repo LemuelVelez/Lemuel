@@ -34,7 +34,13 @@ const Hero = () => (
 
         <div className="hero-actions">
           <Button text="Explore Projects" href="#work" />
-          <Button text="Email Me" href="https://mail.google.com/mail/?view=cm&fs=1&to=velezlem12%40gmail.com" secondary />
+          <Button
+            text="Email Me"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=velezlem12%40gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            secondary
+          />
         </div>
 
         <div className="hero-meta">

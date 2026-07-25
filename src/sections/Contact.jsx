@@ -11,7 +11,11 @@ const Contact = () => (
         </p>
 
         <div className="contact-details">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=velezlem12%40gmail.com">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=velezlem12%40gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span>Email</span>
             <strong>velezlem12@gmail.com</strong>
           </a>
