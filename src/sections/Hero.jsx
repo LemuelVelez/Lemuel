@@ -54,7 +54,7 @@ const Hero = () => (
       <div className="hero-visual hero-visual-3d" aria-label="Interactive Three.js developer portfolio scene">
         <HeroExperience />
         <div className="hero-portrait-badge">
-          <img src="/images/bsis-grad.webp" alt="Lemuel Velez BSIS graduation portrait" />
+          <img src="/images/ssg-grad.webp" alt="Lemuel Velez graduation portrait" />
         </div>
         <div className="logo-orbit">
           <img src="/images/logo.webp" alt="Jose Rizal Memorial State University logo" />
