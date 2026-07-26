@@ -1,5 +1,6 @@
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
+import HeroExperience from "../components/models/hero_models/HeroExperience";
 import { words } from "../constants";
 
 const Hero = () => (
@@ -50,20 +51,10 @@ const Hero = () => (
         </div>
       </div>
 
-      <div className="hero-visual" aria-label="Graduation highlights">
-        <div className="photo-card photo-card-main">
+      <div className="hero-visual hero-visual-3d" aria-label="Interactive Three.js developer portfolio scene">
+        <HeroExperience />
+        <div className="hero-portrait-badge">
           <img src="/images/bsis-grad.webp" alt="Lemuel Velez BSIS graduation portrait" />
-          <div className="photo-caption">
-            <strong>BS Information Systems</strong>
-            <span>JRMSU · 2022–2026</span>
-          </div>
-        </div>
-        <div className="photo-card photo-card-float">
-          <img src="/images/ssg-grad.webp" alt="Lemuel Velez SSG programmer graduation portrait" />
-          <div className="photo-caption">
-            <strong>SSG Programmer</strong>
-            <span>2024–2026</span>
-          </div>
         </div>
         <div className="logo-orbit">
           <img src="/images/logo.webp" alt="Jose Rizal Memorial State University logo" />

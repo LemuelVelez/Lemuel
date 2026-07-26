@@ -316,6 +316,76 @@ img {
   min-height: 610px;
 }
 
+.hero-visual-3d {
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 65% 25%, rgba(79, 124, 255, 0.24), transparent 42%),
+    radial-gradient(circle at 25% 80%, rgba(247, 201, 72, 0.11), transparent 38%),
+    linear-gradient(145deg, #0b1026 0%, #060914 72%);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.46);
+}
+
+.hero-visual-3d::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.72), transparent 78%);
+}
+
+.hero-visual-3d::after {
+  content: "";
+  position: absolute;
+  inset: 16px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 23px;
+  pointer-events: none;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-canvas canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  touch-action: none;
+}
+
+.hero-portrait-badge {
+  position: absolute;
+  left: 22px;
+  bottom: 22px;
+  z-index: 4;
+  width: 138px;
+  height: 178px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 22px;
+  background: rgba(5, 8, 22, 0.72);
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.42);
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+
+.hero-portrait-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .photo-card {
   position: absolute;
   overflow: hidden;
@@ -1128,6 +1198,30 @@ img {
 
   .hero-visual {
     min-height: 520px;
+  }
+
+  .hero-visual-3d {
+    border-radius: 24px;
+  }
+
+  .hero-visual-3d::after {
+    inset: 11px;
+    border-radius: 17px;
+  }
+
+  .hero-portrait-badge {
+    left: 14px;
+    bottom: 14px;
+    width: 102px;
+    height: 134px;
+    border-radius: 17px;
+  }
+
+  .hero-visual-3d .logo-orbit {
+    top: 12px;
+    right: 12px;
+    width: 72px;
+    height: 72px;
   }
 
   .photo-card-main {
