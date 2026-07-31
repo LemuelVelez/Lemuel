@@ -8,6 +8,8 @@ import {
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Suspense, useEffect, useMemo, useRef } from "react";
 
+import Computer from "../contact/Computer";
+
 const PortfolioAsset = ({ path, ...props }) => {
   const { scene } = useGLTF(path);
   const model = useMemo(() => scene.clone(true), [scene]);
@@ -30,32 +32,37 @@ const PortfolioScene = () => {
   useFrame(({ clock }, delta) => {
     if (!sceneGroup.current) return;
 
-    sceneGroup.current.rotation.y += delta * 0.08;
-    sceneGroup.current.position.y = Math.sin(clock.elapsedTime * 0.7) * 0.08;
+    sceneGroup.current.rotation.y += delta * 0.055;
+    sceneGroup.current.position.y = Math.sin(clock.elapsedTime * 0.65) * 0.06;
   });
 
   return (
     <group ref={sceneGroup}>
-      <Float speed={1.35} rotationIntensity={0.3} floatIntensity={0.35}>
-        <PortfolioAsset
-          path="/models/portfolio/developer-core.glb"
-          position={[-0.35, 0.35, 0]}
-          rotation={[0.18, -0.35, 0.08]}
-          scale={0.95}
-        />
+      <Float speed={1.1} rotationIntensity={0.12} floatIntensity={0.2}>
+        <group
+          position={[0, -1.5, -2]}
+          rotation={[0, -0.32, 0]}
+          scale={0.03}
+        >
+          <Computer />
+        </group>
       </Float>
 
       <Float speed={1.8} rotationIntensity={0.5} floatIntensity={0.55}>
         <PortfolioAsset
           path="/models/portfolio/code-modules.glb"
-          position={[2.15, -1.15, -0.65]}
+          position={[2.35, -1.2, -0.45]}
           rotation={[-0.08, -0.45, 0.18]}
-          scale={0.72}
+          scale={0.68}
         />
       </Float>
 
-      <mesh position={[-0.25, -2.05, 0]} rotation={[Math.PI / 2, 0, 0]} receiveShadow>
-        <torusGeometry args={[2.45, 0.025, 12, 100]} />
+      <mesh
+        position={[0, -2.08, 0]}
+        rotation={[Math.PI / 2, 0, 0]}
+        receiveShadow
+      >
+        <torusGeometry args={[2.6, 0.025, 12, 100]} />
         <meshStandardMaterial
           color="#f7c948"
           emissive="#f7c948"
@@ -73,21 +80,21 @@ const HeroExperience = () => (
     <Canvas
       shadows
       dpr={[1, 1.75]}
-      camera={{ position: [0, 0.25, 8.4], fov: 40 }}
+      camera={{ position: [0, 0.35, 8.8], fov: 40 }}
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
     >
-      <ambientLight intensity={0.7} color="#cad8ff" />
-      <hemisphereLight args={["#8bb7ff", "#090d1e", 1.3]} />
+      <ambientLight intensity={0.78} color="#cad8ff" />
+      <hemisphereLight args={["#8bb7ff", "#090d1e", 1.4]} />
       <spotLight
         castShadow
         position={[4.5, 6.5, 5]}
         angle={0.45}
         penumbra={0.9}
-        intensity={55}
+        intensity={60}
         color="#ffffff"
       />
-      <pointLight position={[-4, 1.5, 3]} intensity={18} color="#557dff" />
-      <pointLight position={[3, -1, 2]} intensity={12} color="#f7c948" />
+      <pointLight position={[-4, 1.5, 3]} intensity={20} color="#557dff" />
+      <pointLight position={[3, -1, 2]} intensity={14} color="#f7c948" />
 
       <Suspense fallback={null}>
         <PortfolioScene />
@@ -101,7 +108,7 @@ const HeroExperience = () => (
         />
         <ContactShadows
           position={[0, -2.1, 0]}
-          opacity={0.48}
+          opacity={0.5}
           scale={8}
           blur={2.4}
           far={5}
@@ -114,7 +121,7 @@ const HeroExperience = () => (
         enablePan={false}
         enableZoom={false}
         autoRotate
-        autoRotateSpeed={0.55}
+        autoRotateSpeed={0.4}
         minPolarAngle={Math.PI / 3.1}
         maxPolarAngle={Math.PI / 1.85}
       />
@@ -122,7 +129,6 @@ const HeroExperience = () => (
   </div>
 );
 
-useGLTF.preload("/models/portfolio/developer-core.glb");
 useGLTF.preload("/models/portfolio/code-modules.glb");
 
 export default HeroExperience;
