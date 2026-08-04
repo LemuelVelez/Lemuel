@@ -17,7 +17,7 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 7, suffix: "", label: "Featured Systems" },
+  { value: 8, suffix: "", label: "Featured Systems" },
   { value: 2, suffix: "", label: "Professional Roles" },
   { value: 10, suffix: "+", label: "Core Technologies" },
   { value: 6, suffix: "", label: "Data & Storage Technologies" },
@@ -205,6 +205,16 @@ const projects = [
     sourceLinks: [
       { label: "GitHub", url: "https://github.com/LemuelVelez/ssg-qrcode-scanner" },
     ],
+  },
+  {
+    title: "3D Lemuel Portfolio",
+    short: "3D",
+    category: "Portfolio",
+    imagePath: "/images/3d_lemuel_portfolio.png",
+    description: "A previous interactive portfolio experience built with Three.js to showcase projects and skills in an immersive 3D interface.",
+    stack: ["React.js", "Three.js"],
+    liveUrl: "https://lemuelportfolio.vercel.app/",
+    sourceLinks: [],
   },
 ];
 
